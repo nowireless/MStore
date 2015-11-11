@@ -20,15 +20,11 @@ import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
-
-
-
-
+import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.collections.MassiveList;
 import org.nowireless.mstore.collections.MassiveSet;
 import org.nowireless.mstore.collections.MassiveTreeSet;
 import org.nowireless.mstore.mcore.CaseInsensitiveComparator;
-import org.nowireless.mstore.mcore.MassiveCore;
 import org.nowireless.mstore.util.extractor.Extractor;
 
 
@@ -456,7 +452,7 @@ public class MUtil
 			list = new ArrayList<T>(coll);
 		}
 		
-		int index = MassiveCore.random.nextInt(list.size());
+		int index = MStore.random.nextInt(list.size());
 		return list.get(index);
 	}
 	
@@ -469,7 +465,7 @@ public class MUtil
 		List<T> ret = new ArrayList<T>(coll);
 		while (ret.size() > count)
 		{
-			int index = MassiveCore.random.nextInt(ret.size());
+			int index = MStore.random.nextInt(ret.size());
 			ret.remove(index);
 		}
 		
@@ -601,7 +597,7 @@ public class MUtil
 	{
 		long ret = (long) Math.floor(val);
 		double prob = val % 1;
-		if (MassiveCore.random.nextDouble() < prob) ret += 1;
+		if (MStore.random.nextDouble() < prob) ret += 1;
 		return ret;
 	}
 	

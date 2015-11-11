@@ -8,6 +8,7 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.store.Entity;
 import org.nowireless.mstore.util.MUtil;
 
@@ -63,7 +64,7 @@ public class Multiverse extends Entity<Multiverse>
 	
 	public Set<String> newUniverse(String universe)
 	{
-		if (universe.equals(MassiveCore.DEFAULT)) return null;
+		if (universe.equals(MStore.DEFAULT)) return null;
 		Set<String> ret = this.uw.get(universe);
 		if (ret == null)
 		{
@@ -82,7 +83,7 @@ public class Multiverse extends Entity<Multiverse>
 	{
 		Set<String> ret = new TreeSet<String>();
 		ret.addAll(this.uw.keySet());
-		ret.add(MassiveCore.DEFAULT);
+		ret.add(MStore.DEFAULT);
 		return ret;
 	}
 	
@@ -94,7 +95,7 @@ public class Multiverse extends Entity<Multiverse>
 			Set<String> worlds = entry.getValue();
 			if (worlds.contains(worldName)) return universe;
 		}
-		return MassiveCore.DEFAULT;
+		return MStore.DEFAULT;
 	}
 	
 	public String getUniverse(Object worldNameExtractable)
@@ -119,7 +120,7 @@ public class Multiverse extends Entity<Multiverse>
 	{
 		if (this.getUniverseForWorldName(worldName).equals(universe)) return false;
 		this.removeWorld(worldName);
-		if (!universe.equals(MassiveCore.DEFAULT))
+		if (!universe.equals(MStore.DEFAULT))
 		{
 			this.newUniverse(universe).add(worldName);
 		}

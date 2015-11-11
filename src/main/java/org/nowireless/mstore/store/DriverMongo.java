@@ -10,7 +10,7 @@ import java.util.Set;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
 
-import org.nowireless.mstore.mcore.MassiveCoreMConf;
+import org.nowireless.mstore.mcore.MStoreMConf;
 
 import com.google.gson.JsonElement;
 import com.mongodb.BasicDBObject;
@@ -262,7 +262,7 @@ public class DriverMongo extends DriverAbstract
 		
 		GsonMongoConverter.gson2MongoObject(data, dbo);
 		
-		dbcoll.save(dbo, MassiveCoreMConf.get().getMongoDbWriteConcernSave());
+		dbcoll.save(dbo, MStoreMConf.get().getMongoDbWriteConcernSave());
 
 		return mtime;
 	}
@@ -271,7 +271,7 @@ public class DriverMongo extends DriverAbstract
 	public void delete(Coll<?> coll, String id)
 	{
 		DBCollection dbcoll = fixColl(coll);
-		dbcoll.remove(new BasicDBObject(ID_FIELD, id), MassiveCoreMConf.get().getMongoDbWriteConcernDelete());
+		dbcoll.remove(new BasicDBObject(ID_FIELD, id), MStoreMConf.get().getMongoDbWriteConcernDelete());
 	}
 
 	//----------------------------------------------//

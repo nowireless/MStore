@@ -36,7 +36,7 @@ public class MultiverseColl extends Coll<Multiverse>
 		super.init();
 		
 		// Ensure the default multiverse exits
-		this.get(MassiveCore.DEFAULT, true);
+		this.get(MStore.DEFAULT, true);
 	}
 	
 }

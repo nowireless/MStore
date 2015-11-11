@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.store.Entity;
 
 import com.google.gson.annotations.SerializedName;
@@ -43,7 +44,7 @@ public class Aspect extends Entity<Aspect>
 	public Multiverse getMultiverse()
 	{
 		Multiverse ret = MultiverseColl.get().get(this.multiverseId);
-		if (ret == null) ret = MultiverseColl.get().get(MassiveCore.DEFAULT);
+		if (ret == null) ret = MultiverseColl.get().get(MStore.DEFAULT);
 		return ret;
 	}
 	public void setMultiverse(Multiverse val) { this.multiverseId = val.getId(); }

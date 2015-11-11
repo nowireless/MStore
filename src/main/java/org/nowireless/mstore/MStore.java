@@ -6,6 +6,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 import java.util.Map.Entry;
 
@@ -50,6 +51,13 @@ import com.google.gson.JsonPrimitive;
 
 public class MStore implements MStoreUser
 {
+	
+	public final static String INSTANCE = "instance";
+	public final static String DEFAULT = "default";
+	
+	public static Random random = new Random();
+
+	
 	// -------------------------------------------- //
 	// 
 	// -------------------------------------------- //

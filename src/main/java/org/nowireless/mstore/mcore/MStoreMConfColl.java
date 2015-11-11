@@ -1,20 +1,19 @@
 package org.nowireless.mstore.mcore;
 
 import org.nowireless.mstore.MStore;
-import org.nowireless.mstore.mcore.MassiveCore;
 import org.nowireless.mstore.store.Coll;
 
-public class MassiveCoreMConfColl extends Coll<MassiveCoreMConf>
+public class MStoreMConfColl extends Coll<MStoreMConf>
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
 	// -------------------------------------------- //
 	
-	private static MassiveCoreMConfColl i = new MassiveCoreMConfColl();
-	public static MassiveCoreMConfColl get() { return i; }
-	private MassiveCoreMConfColl()
+	private static MStoreMConfColl i = new MStoreMConfColl();
+	public static MStoreMConfColl get() { return i; }
+	private MStoreMConfColl()
 	{
-		super("massivecore_mconf", MassiveCoreMConf.class, MStore.getDb(ConfServer.dburi), MStore.get());
+		super("massivecore_mconf", MStoreMConf.class, MStore.getDb(ConfServer.dburi), MStore.get());
 	}
 
 	// -------------------------------------------- //
@@ -35,7 +34,7 @@ public class MassiveCoreMConfColl extends Coll<MassiveCoreMConf>
 	public void init()
 	{
 		super.init();
-		MassiveCoreMConf.i = this.get(MassiveCore.INSTANCE, true);
+		MStoreMConf.i = this.get(MStore.INSTANCE, true);
 	}
 	
 }
