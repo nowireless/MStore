@@ -20,6 +20,7 @@ import org.nowireless.mstore.adapter.MassiveMapAdapter;
 import org.nowireless.mstore.adapter.MassiveSetAdapter;
 import org.nowireless.mstore.adapter.MassiveTreeMapAdapter;
 import org.nowireless.mstore.adapter.MassiveTreeSetAdapter;
+import org.nowireless.mstore.adapter.ModdedEnumTypeAdapter;
 import org.nowireless.mstore.adapter.UUIDAdapter;
 import org.nowireless.mstore.collections.BackstringEnumSet;
 import org.nowireless.mstore.collections.MassiveList;
@@ -33,6 +34,7 @@ import org.nowireless.mstore.collections.MassiveTreeMapDef;
 import org.nowireless.mstore.collections.MassiveTreeSet;
 import org.nowireless.mstore.collections.MassiveTreeSetDef;
 import org.nowireless.mstore.mcore.ConfServer;
+import org.nowireless.mstore.mcore.MultiverseColl;
 import org.nowireless.mstore.store.Coll;
 import org.nowireless.mstore.store.Db;
 import org.nowireless.mstore.store.Driver;
@@ -90,13 +92,15 @@ public class MStore implements MStoreUser
 				.registerTypeAdapter(MassiveTreeSetDef.class, MassiveTreeSetAdapter.get())
 
 				.registerTypeAdapter(BackstringEnumSet.class, BackstringEnumSetAdapter.get())
-				.registerTypeAdapter(Entry.class, EntryAdapter.get());
+				.registerTypeAdapter(Entry.class, EntryAdapter.get())
+				
+				.registerTypeAdapterFactory(ModdedEnumTypeAdapter.ENUM_FACTORY);
 	}
 	
 	public void init() {
 		ExamineThread.get().start();
 		
-		//MultiverseColl.get().init();
+		MultiverseColl.get().init();
 		//AspectColl.get().init();
 		//MassiveCoreMConfColl.get().init();
 	}
