@@ -67,10 +67,10 @@ public class MStore implements MStoreUser
 	public static MStore get() { return i; }
 	private MStore() {
 		i = this;
-		gson = this.getGsonBuilder().create();
+		gson = getGsonBuilder().create();
 	}
 	
-	public GsonBuilder getGsonBuilder() {
+	public static GsonBuilder getGsonBuilder() {
 		return new GsonBuilder().setPrettyPrinting()
 				.disableHtmlEscaping()
 				.excludeFieldsWithModifiers(Modifier.TRANSIENT)
@@ -97,12 +97,16 @@ public class MStore implements MStoreUser
 				.registerTypeAdapterFactory(ModdedEnumTypeAdapter.ENUM_FACTORY);
 	}
 	
+	private volatile boolean  inited = false;
+	
 	public void init() {
+		if(inited) return; 
 		ExamineThread.get().start();
 		
 		MultiverseColl.get().init();
 		//AspectColl.get().init();
 		//MassiveCoreMConfColl.get().init();
+		inited = true;
 	}
 	
 	// -------------------------------------------- //
