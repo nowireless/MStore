@@ -5,7 +5,7 @@ import java.util.Map;
 import org.nowireless.common.massive.MUtil;
 import org.nowireless.mstore.MStore;
 
-public class ConfServer extends SimpleConfig
+public class ConfServer
 {
 	// -------------------------------------------- //
 	// INSTANCE & CONSTRUCT
@@ -13,7 +13,7 @@ public class ConfServer extends SimpleConfig
 	
 	private static transient ConfServer i = new ConfServer();
 	public static ConfServer get() { return i; }
-	public ConfServer() { super(MStore.get()); }
+	//public ConfServer() { super(MStore.get()); }
 	
 	// -------------------------------------------- //
 	// FIELDS

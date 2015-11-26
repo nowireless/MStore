@@ -116,8 +116,8 @@ public class MStore implements MStoreUser
 	public static File DATA_FOLDER = new File("mstore_data");
 	
 	@Override public Gson getGson() { return gson; }
-	@Override
-	public File getDataFolder() { return DATA_FOLDER; }
+	//@Override
+	//public File getDataFolder() { return DATA_FOLDER; }
 	
 	// -------------------------------------------- //
 	// Logging

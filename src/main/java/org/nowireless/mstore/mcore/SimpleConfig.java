@@ -27,15 +27,15 @@ public class SimpleConfig
 		this.file = file;
 	}
 	
-	public SimpleConfig(MStoreUser plugin, String confname)
+	public SimpleConfig(MStoreUser plugin, File folder, String confname)
 	{
-		this(plugin, new File(plugin.getDataFolder(), confname+".json"));
+		this(plugin, new File(folder, confname+".json"));
 	}
 	
-	public SimpleConfig(MStoreUser plugin)
-	{
-		this(plugin, "conf");
-	}
+	//public SimpleConfig(MStoreUser plugin, File folder)
+	//{
+	//	this(plugin, folder, "conf");
+	//}
 	
 	// -------------------------------------------- //
 	// IO

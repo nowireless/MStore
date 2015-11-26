@@ -7,5 +7,5 @@ import com.google.gson.Gson;
 public interface MStoreUser {
 	
 	public Gson getGson();
-	public File getDataFolder();
+	//public File getDataFolder();
 }
