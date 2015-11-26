@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.nowireless.common.massive.MUtil;
 import org.nowireless.mstore.mcore.Aspect;
 import org.nowireless.mstore.mcore.Multiverse;
-import org.nowireless.mstore.util.MUtil;
 
 public abstract class Colls<C extends Coll<E>, E>
 {

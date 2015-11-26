@@ -2,7 +2,7 @@ package org.nowireless.mstore.mcore;
 
 import java.io.Serializable;
 
-import org.nowireless.mstore.util.MUtil;
+import org.nowireless.common.massive.MUtil;
 
 public class Triple<A, B, C> implements Cloneable, Serializable
 {

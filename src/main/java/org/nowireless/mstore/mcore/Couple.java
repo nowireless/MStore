@@ -3,7 +3,7 @@ package org.nowireless.mstore.mcore;
 import java.io.Serializable;
 import java.util.Map.Entry;
 
-import org.nowireless.mstore.util.MUtil;
+import org.nowireless.common.massive.MUtil;
 
 public class Couple<A, B> implements Entry<A, B>, Cloneable, Serializable
 {

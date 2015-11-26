@@ -1,5 +1,6 @@
 package org.nowireless.mstore.mcore;
 
+import org.nowireless.common.massive.predicate.Predictate;
 import org.nowireless.mstore.store.Entity;
 
 public class PredictateIsntDefaultEntity implements Predictate<Entity<?>>

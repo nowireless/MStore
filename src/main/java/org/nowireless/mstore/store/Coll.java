@@ -12,10 +12,10 @@ import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 
+import org.nowireless.common.massive.predicate.Predictate;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.MStoreUser;
 import org.nowireless.mstore.mcore.NaturalOrderComparator;
-import org.nowireless.mstore.mcore.Predictate;
 import org.nowireless.mstore.store.accessor.Accessor;
 
 import com.google.gson.Gson;

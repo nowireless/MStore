@@ -8,9 +8,9 @@ import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
+import org.nowireless.common.massive.MUtil;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.store.Entity;
-import org.nowireless.mstore.util.MUtil;
 
 public class Multiverse extends Entity<Multiverse>
 {	

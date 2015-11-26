@@ -4,7 +4,7 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Set;
 
-import org.nowireless.mstore.collections.BackstringEnumSet;
+import org.nowireless.common.massive.collections.BackstringEnumSet;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;

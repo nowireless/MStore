@@ -6,12 +6,22 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.UUID;
 import java.util.Map.Entry;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.nowireless.common.massive.collections.BackstringEnumSet;
+import org.nowireless.common.massive.collections.MassiveList;
+import org.nowireless.common.massive.collections.MassiveListDef;
+import org.nowireless.common.massive.collections.MassiveMap;
+import org.nowireless.common.massive.collections.MassiveMapDef;
+import org.nowireless.common.massive.collections.MassiveSet;
+import org.nowireless.common.massive.collections.MassiveSetDef;
+import org.nowireless.common.massive.collections.MassiveTreeMap;
+import org.nowireless.common.massive.collections.MassiveTreeMapDef;
+import org.nowireless.common.massive.collections.MassiveTreeSet;
+import org.nowireless.common.massive.collections.MassiveTreeSetDef;
 import org.nowireless.mstore.adapter.BackstringEnumSetAdapter;
 import org.nowireless.mstore.adapter.EntryAdapter;
 import org.nowireless.mstore.adapter.JsonElementAdapter;
@@ -22,19 +32,7 @@ import org.nowireless.mstore.adapter.MassiveTreeMapAdapter;
 import org.nowireless.mstore.adapter.MassiveTreeSetAdapter;
 import org.nowireless.mstore.adapter.ModdedEnumTypeAdapter;
 import org.nowireless.mstore.adapter.UUIDAdapter;
-import org.nowireless.mstore.collections.BackstringEnumSet;
-import org.nowireless.mstore.collections.MassiveList;
-import org.nowireless.mstore.collections.MassiveListDef;
-import org.nowireless.mstore.collections.MassiveMap;
-import org.nowireless.mstore.collections.MassiveMapDef;
-import org.nowireless.mstore.collections.MassiveSet;
-import org.nowireless.mstore.collections.MassiveSetDef;
-import org.nowireless.mstore.collections.MassiveTreeMap;
-import org.nowireless.mstore.collections.MassiveTreeMapDef;
-import org.nowireless.mstore.collections.MassiveTreeSet;
-import org.nowireless.mstore.collections.MassiveTreeSetDef;
 import org.nowireless.mstore.mcore.ConfServer;
-import org.nowireless.mstore.mcore.MultiverseColl;
 import org.nowireless.mstore.store.Coll;
 import org.nowireless.mstore.store.Db;
 import org.nowireless.mstore.store.Driver;
@@ -57,8 +55,6 @@ public class MStore implements MStoreUser
 	public final static String INSTANCE = "instance";
 	public final static String DEFAULT = "default";
 	
-	public static Random random = new Random();
-
 	
 	// -------------------------------------------- //
 	// 
@@ -103,7 +99,7 @@ public class MStore implements MStoreUser
 		if(inited) return; 
 		ExamineThread.get().start();
 		
-		MultiverseColl.get().init();
+		//MultiverseColl.get().init();
 		//AspectColl.get().init();
 		//MassiveCoreMConfColl.get().init();
 		inited = true;

@@ -2,8 +2,8 @@ package org.nowireless.mstore.mcore;
 
 import java.util.Map;
 
+import org.nowireless.common.massive.MUtil;
 import org.nowireless.mstore.MStore;
-import org.nowireless.mstore.util.MUtil;
 
 public class ConfServer extends SimpleConfig
 {

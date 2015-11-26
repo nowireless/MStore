@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-import org.nowireless.mstore.collections.MassiveList;
+import org.nowireless.common.massive.collections.MassiveList;
 
 public class MassiveException extends Exception
 {

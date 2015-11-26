@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.nowireless.common.massive.MUtil;
 import org.nowireless.mstore.MStore;
 import org.nowireless.mstore.mcore.Prioritized;
-import org.nowireless.mstore.util.MUtil;
 
 public class PriorityLines implements Prioritized, Comparable<PriorityLines>
 {

@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.nowireless.common.massive.predicate.Predictate;
 import org.nowireless.mstore.MStoreUser;
-import org.nowireless.mstore.mcore.Predictate;
 
 import com.google.gson.JsonElement;
 

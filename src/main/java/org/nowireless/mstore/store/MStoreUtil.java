@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 
-import org.nowireless.mstore.mcore.Predictate;
+import org.nowireless.common.massive.predicate.Predictate;
 
 public class MStoreUtil
 {

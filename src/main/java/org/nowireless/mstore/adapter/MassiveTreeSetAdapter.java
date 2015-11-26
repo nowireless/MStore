@@ -3,8 +3,8 @@ package org.nowireless.mstore.adapter;
 import java.lang.reflect.Type;
 import java.util.Collection;
 
-import org.nowireless.mstore.collections.MassiveTreeSet;
-import org.nowireless.mstore.collections.MassiveTreeSetDef;
+import org.nowireless.common.massive.collections.MassiveTreeSet;
+import org.nowireless.common.massive.collections.MassiveTreeSetDef;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonElement;

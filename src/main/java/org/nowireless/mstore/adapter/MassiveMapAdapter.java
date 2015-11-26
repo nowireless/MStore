@@ -3,8 +3,8 @@ package org.nowireless.mstore.adapter;
 import java.lang.reflect.Type;
 import java.util.Map;
 
-import org.nowireless.mstore.collections.MassiveMap;
-import org.nowireless.mstore.collections.MassiveMapDef;
+import org.nowireless.common.massive.collections.MassiveMap;
+import org.nowireless.common.massive.collections.MassiveMapDef;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonElement;

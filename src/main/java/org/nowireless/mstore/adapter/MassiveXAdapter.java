@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Map;
 
-import org.nowireless.mstore.collections.Def;
+import org.nowireless.common.massive.collections.Def;
 
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
