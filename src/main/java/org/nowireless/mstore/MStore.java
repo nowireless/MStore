@@ -105,6 +105,12 @@ public class MStore implements MStoreUser
 		inited = true;
 	}
 	
+	public void deinit() {
+		for(Coll<?> coll : Coll.getInstances()) {
+			coll.deinit();
+		}
+	}
+	
 	// -------------------------------------------- //
 	// GSON
 	// -------------------------------------------- //
