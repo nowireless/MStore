@@ -11,6 +11,7 @@ public class MStoreShutdownHook extends ShutDownHookAbstract {
 	@Override
 	public void run() {
 		MStore.get().deinit();
+		
 	}
 
 }

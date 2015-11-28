@@ -51,7 +51,7 @@ public class ExamineThread extends Thread
 				long duration = after-before;
 				this.lastDurationMillis = duration;
 				
-				MStore.LOG.debug("ExamineThread iteration took {}.", after-before);
+				MStore.LOG.debug("Iteration took {}.", after-before);
 				//MassiveCore.get().log(message);
 				
 				Thread.sleep(5000);

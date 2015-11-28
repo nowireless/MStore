@@ -109,6 +109,13 @@ public class MStore implements MStoreUser
 		for(Coll<?> coll : Coll.getInstances()) {
 			coll.deinit();
 		}
+		ExamineThread.get().interrupt();
+		try {
+			ExamineThread.get().join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	// -------------------------------------------- //
@@ -128,7 +135,7 @@ public class MStore implements MStoreUser
 	// -------------------------------------------- //
 	// Logging
 	// -------------------------------------------- //
-	public static final Logger LOG = LogManager.getLogger("MSore");
+	public static final Logger LOG = LogManager.getLogger("MStore");
 	
 	// -------------------------------------------- //
 	// DRIVER REGISTRY
