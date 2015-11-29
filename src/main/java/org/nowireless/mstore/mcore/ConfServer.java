@@ -3,7 +3,6 @@ package org.nowireless.mstore.mcore;
 import java.util.Map;
 
 import org.nowireless.common.massive.MUtil;
-import org.nowireless.mstore.MStore;
 
 public class ConfServer
 {

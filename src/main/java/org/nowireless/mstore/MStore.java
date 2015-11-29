@@ -37,7 +37,6 @@ import org.nowireless.mstore.store.Coll;
 import org.nowireless.mstore.store.Db;
 import org.nowireless.mstore.store.Driver;
 import org.nowireless.mstore.store.DriverFlatfile;
-import org.nowireless.mstore.store.DriverMongo;
 import org.nowireless.mstore.store.ExamineThread;
 import org.nowireless.mstore.store.GsonEqualsChecker;
 
@@ -156,7 +155,7 @@ public class MStore implements MStoreUser
 	
 	static
 	{
-		registerDriver(DriverMongo.get());
+		//registerDriver(DriverMongo.get());
 		registerDriver(DriverFlatfile.get());
 		new MStore();
 	}
